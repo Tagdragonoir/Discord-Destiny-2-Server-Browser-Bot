@@ -120,11 +120,6 @@ roster = Roster()
 auto_roster_channel = None
 auto_roster_message = None
 
-@bot.command(name='ping')
-async def ping(ctx):
-    await ctx.send('<#639272029463248908>')
-
-
 @bot.command(name='create-lobby', aliases=['create_lobby'])
 async def create_lobby(ctx, bungie_name, voice_channel=None):
     await ctx.send(await roster.add_lobby(bungie_name, ctx.author.id, voice_channel))
